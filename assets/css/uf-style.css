@@ -1,18 +1,4 @@
-/*!
 
- =========================================================
- * Login Form Bootstrap 1
- =========================================================
-
- * Product Page: https://uifresh.net
- * Copyright 2021 UIFresh (https://uifresh.net)
- * Coded by UIFresh
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
 html, body{
 	height: 100%;
 }
@@ -65,15 +51,25 @@ a:hover{
 input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder { color: #fff; }
 
 .uf-btn-primary {
+    padding: 9px 25px;
+    font-size: 20px;
     background: #fff;
     color: #2148C0;
-    box-shadow: 0 4px #999;
+    box-shadow: 0 5px #999;
+    border: none;
+    border-radius: 5px;
 }
 
 .uf-btn-primary:hover {
     background: #3670cb;
     color: #fff;
 }
+
+.uf-btn-primary:active {
+    background-color: #3670cb;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+  }
 
 .uf-form-check-input:checked {
     background-color: #842029;
