@@ -161,6 +161,16 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <?php foreach( $data['transaksi'] as $transaksi) : ?>
+                        <tr>
+                          <th scope="row"><a href="#"><?= $transaksi['id']; ?></a></th>
+                          <td><?= $transaksi['nama_pelanggan'] ;?></td>
+                          <td><a href="#" class="text-primary"><?= $transaksi['produk'] ;?></a></td>
+                          <td><?= $transaksi['total_harga'] ;?></td>
+                          <td><span class="badge rounded-pill bg-success"><?= $transaksi['status'] ;?></span></td>
+                          <td><a href="/halaman_transaksi.html" class="badge rounded-pill bg-primary">Submit</a></td>
+                        </tr>
+                      <?php endforeach;?>
                       <tr>
                         <th scope="row"><a href="#">#2457</a></th>
                         <td>Brandon Jacob</td>
