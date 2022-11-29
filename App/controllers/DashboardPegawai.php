@@ -4,7 +4,7 @@ class DashboardPegawai extends Controller{
         $data['judul'] = 'Dashboard Pegawai';
         $data['transaksi'] = $this->model('Transaksi_model')->getAllTransaksi();
         $this->view('templates/header', $data);
-        $this->view('dashboard-pegawai/index');
+        $this->view('dashboard-pegawai/index', $data);
         $this->view('templates/footer');
     }
 
