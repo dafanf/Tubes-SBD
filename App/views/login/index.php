@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/uf-style.css">
     <title>Login Form</title>
   </head>
-  <body>
+  <body style="background-image: url(<?= BASEURL; ?>/img/login-background-3.jpg);">
     <div class="uf-form-signin">
       <div class="text-center">
         <img src="<?= BASEURL; ?>/img/main-logo.png" alt="company-logo" width="250" height="250"></a>

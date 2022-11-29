@@ -6,7 +6,6 @@ body{
 	display: flex;
 	align-items: center;
 	background-color: #2640CA;
-    background-image: url(/assets/img/login-background-3.jpg);
     background-size: cover;
     color: #ffffff;
 }
