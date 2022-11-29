@@ -87,14 +87,14 @@
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
-        <a class="nav-link " href="dashboard_pemilik.html">
+        <a class="nav-link " href="<?= BASEURL;?>/DashboardPemilik">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="tambah_pegawai.html">
+        <a class="nav-link collapsed" href="<?= BASEURL;?>/DashboardPemilik/tambah_pegawai">
           <i class="bi bi-person"></i>
           <span>Tambah Pegawai</span>
         </a>
