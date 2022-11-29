@@ -1164,6 +1164,10 @@ h6 {
   color: #969CAD; 
 }                    
 
+.pad {
+  padding-bottom: 10px;
+}
+
 /* Top Selling */
 .dashboard .top-selling {
   font-size: 14px;
