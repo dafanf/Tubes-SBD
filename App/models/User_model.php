@@ -5,6 +5,10 @@
         public function getUser(){
             return $this->nama;
         }
+
+        public function getTotalUser(){
+            
+        }
     }
 
 ?>
