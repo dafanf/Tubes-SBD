@@ -121,25 +121,4 @@ class Database{
     return $this->stmt->rowCount(); // fungsi bawaan PDO
   }
 
-  public static function ExceptionString($ex)
-  {
-    $result = "";
-    switch($ex->errorInfo[1])
-        {
-          case 20000:
-            $result = "Stok tidak memenuhi!";
-            break;
-          case 20001:
-            $result = "Alamat tidak sesuai!";
-            break;
-          case 20002:
-            $result = "Alamat tidak sesuai!";
-            break;
-          default:
-            $result = $ex->errorInfo[2];
-            break;
-        }
-    return $result;
-  }
-
 }
