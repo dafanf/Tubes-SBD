@@ -17,14 +17,14 @@
       <div class="text-center">
         <img src="<?= BASEURL; ?>/img/main-logo.png" alt="company-logo" width="250" height="250"></a>
       </div>
-      <form class="mt-4">
+      <form class="mt-4" method="post" action="<?= BASEURL; ?>/login/loginuser">
         <div class="input-group uf-input-group input-group-lg mb-3">
           <span class="input-group-text fa fa-user"></span>
-          <input type="text" class="form-control" placeholder="Username" name="username" required>
+          <input type="text" class="form-control" placeholder="Username" name="username" id="username" required>
         </div>
         <div class="input-group uf-input-group input-group-lg mb-3">
           <span class="input-group-text fa fa-lock"></span>
-          <input type="password" class="form-control" placeholder="Password" name="password" required>
+          <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
         </div>
         <div class="d-flex mb-3 justify-content-between">
           <a href="#">Forgot password?</a>

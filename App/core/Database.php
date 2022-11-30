@@ -1,124 +1,124 @@
 <?php
 
-class Database{
+class Database
+{
     private $host = DB_HOST;
     private $user = DB_USER;
     private $pass = DB_PASS;
     private $db_name = DB_NAME;
 
-    //database handler
-    private $dbh;
-    private $stmt;
+    private $dbhandler;
+    private $statement;
 
-    public function __contruct(){
-         // source db
+    public function __construct()
+    {
+      // source db
       // $dbsource = '//' . $this->host . '/' . $this->db_name;
       
       $tns = "  
-      (DESCRIPTION =
-          (ADDRESS_LIST =
-            (ADDRESS = (PROTOCOL = TCP)(HOST = ". $this->host .")(PORT = 1521))
+        (DESCRIPTION =
+            (ADDRESS_LIST =
+              (ADDRESS = (PROTOCOL = TCP)(HOST = ". $this->host .")(PORT = 1521))
+            )
+            (CONNECT_DATA =
+              (SERVICE_NAME = ". $this->db_name .")
+            )
           )
-          (CONNECT_DATA =
-            (SERVICE_NAME = ". $this->db_name .")
-          )
-        )
-             ";
+               ";
 
-    // untuk optimasi koneksi ke database
-    $option = [
-      PDO::ATTR_PERSISTENT => true,
-      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ];
+      // untuk optimasi koneksi ke database
+      $option = [
+        PDO::ATTR_PERSISTENT => true,
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+      ];
 
-    try
-    {
-      $this->dbh = new PDO('oci:dbname='.$tns, $this->user, $this->pass, $option);
+      try
+      {
+        $this->dbhandler = new PDO('oci:dbname='.$tns, $this->user, $this->pass, $option);
+      }
+      catch(PDOException $e)
+      {
+        die($e->getMessage());
+      }
     }
-    catch(PDOException $e)
+
+    public function query($query)
     {
-      die($e->getMessage());
+      $this->statement = $this->dbhandler->prepare($query);
     }
-  }
 
-  public function query($query)
-  {
-    $this->stmt = $this->dbh->prepare($query);
-  }
+    public function bind ($param, $value, $type = null)
+    {
+      if (is_null($type))
+      {
+        switch(true)
+        {
+          case is_int($value):
+            $type = PDO::PARAM_INT;
+          break;
+          case is_bool($value):
+            $type = PDO::PARAM_BOOL;
+          break;
+          case is_null($value):
+            $type = PDO::PARAM_NULL;
+          break;
+          default:
+            $type = PDO::PARAM_STR;
+        }
+      }
 
-  public function bind ($param, $value, $type = null)
-  {
-    if (is_null($type))
+      $this->statement->bindValue($param, $value, $type); // bindValue adalah fungsi bawaan PDO
+    }
+
+    public function bindOutput($param, &$value, $size = 1)
     {
       switch(true)
       {
         case is_int($value):
           $type = PDO::PARAM_INT;
+          $size = 11;
         break;
         case is_bool($value):
           $type = PDO::PARAM_BOOL;
+          $size = 1;
         break;
         case is_null($value):
           $type = PDO::PARAM_NULL;
+          $size = 1;
         break;
         default:
           $type = PDO::PARAM_STR;
       }
+      $this->statement->bindParam($param, $value, $type | PDO::PARAM_INPUT_OUTPUT, $size); // bindParam adalah fungsi bawaan PDO
     }
 
-    $this->stmt->bindValue($param, $value, $type); // bindValue adalah fungsi bawaan PDO
-  }
-
-  public function bindOutput($param, &$value, $size = 1)
-  {
-    switch(true)
+    public function execute()
     {
-      case is_int($value):
-        $type = PDO::PARAM_INT;
-        $size = 11;
-      break;
-      case is_bool($value):
-        $type = PDO::PARAM_BOOL;
-        $size = 1;
-      break;
-      case is_null($value):
-        $type = PDO::PARAM_NULL;
-        $size = 1;
-      break;
-      default:
-        $type = PDO::PARAM_STR;
+      $this->statement->execute();
     }
-    $this->stmt->bindParam($param, $value, $type | PDO::PARAM_INPUT_OUTPUT, $size); // bindParam adalah fungsi bawaan PDO
-  }
 
-  public function execute()
-  {
-    $this->stmt->execute();
-  }
+    // untuk menampilkan semua data
+    public function resultSet()
+    {
+      $this->execute();
+      return $this->statement->fetchAll(PDO::FETCH_ASSOC);
+    }
 
-  // untuk menampilkan semua data
-  public function resultSet()
-  {
-    $this->execute();
-    return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
-  }
+    public function colCount()
+    {
+      $this->execute();
+      return $this->statement->fetchColumn();
+    }
 
-  public function colCount()
-  {
-    $this->execute();
-    return $this->stmt->fetchColumn();
-  }
+    // untuk menampilkan data tertentu
+    public function single()
+    {
+      $this->execute();
+      return $this->statement->fetch(PDO::FETCH_ASSOC);
+    }
 
-  // untuk menampilkan data tertentu
-  public function single()
-  {
-    $this->execute();
-    return $this->stmt->fetch(PDO::FETCH_ASSOC);
-  }
-
-  public function rowCount()
-  {
-    return $this->stmt->rowCount(); // fungsi bawaan PDO
-  }
-
+    public function rowCount()
+    {
+      return $this->statement->rowCount(); // fungsi bawaan PDO
+    }
 }
