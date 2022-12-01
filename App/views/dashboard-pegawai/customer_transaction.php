@@ -98,14 +98,14 @@
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-          <a class="nav-link " href="<?= BASEURL; ?>/DashboardPegawai/input_transaction">
+          <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPegawai/input_transaction">
             <i class="bi bi-journal-text"></i>
-            <span>Input Transaksi</span>
+            <span>Input Customer</span>
           </a>
         </li><!-- End Input Transaksi Nav -->
 
         <li class="nav-item">
-          <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPegawai/customer_transaction">
+          <a class="nav-link " href="<?= BASEURL; ?>/DashboardPegawai/customer_transaction">
             <i class="bi bi-journal-text"></i>
             <span>Input Transaksi</span>
           </a>

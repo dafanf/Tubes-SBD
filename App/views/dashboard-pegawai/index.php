@@ -28,7 +28,7 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <span>Pegawai</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -69,6 +69,13 @@
           <span>Input Transaksi</span>
         </a>
       </li><!-- End Input Transaksi Nav -->
+
+      <li class="nav-item">
+          <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPegawai/customer_transaction">
+            <i class="bi bi-journal-text"></i>
+            <span>Input Transaksi</span>
+          </a>
+      </li><!-- End Input Customer Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="login.html">
@@ -169,7 +176,7 @@
                 </div>
 
                 <div class="card-body pb-0">
-                  <h5 class="card-title">Transaksi per Jenis Pakaian <span>| Bulan Ini</span></h5>
+                  <h5 class="card-title">Harga per Jenis Pakaian <span>| Bulan Ini</span></h5>
 
                   <table class="table table-borderless">
                     <thead>

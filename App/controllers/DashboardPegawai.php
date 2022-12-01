@@ -16,7 +16,17 @@ class DashboardPegawai extends Controller{
     }
 
     public function input_transaction(){
+        $header['judul'] = 'Input Transaksi';
+        $this->view('templates/header', $header);
         $this->view('dashboard-pegawai/input_transaction');
+        $this->view('templates/footer');
+    }
+    
+    public function customer_transaction(){
+        $header['judul'] = 'Input Customer';
+        $this->view('templates/header', $header);
+        $this->view('dashboard-pegawai/customer_transaction');
+        $this->view('templates/footer');
     }
 }
 ?>
