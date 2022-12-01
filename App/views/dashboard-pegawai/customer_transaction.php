@@ -100,14 +100,14 @@
         <li class="nav-item">
           <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPegawai/input_transaction">
             <i class="bi bi-journal-text"></i>
-            <span>Input Customer</span>
+            <span>Input Transaksi</span>
           </a>
         </li><!-- End Input Transaksi Nav -->
 
         <li class="nav-item">
           <a class="nav-link " href="<?= BASEURL; ?>/DashboardPegawai/customer_transaction">
             <i class="bi bi-journal-text"></i>
-            <span>Input Transaksi</span>
+            <span>Input Customer</span>
           </a>
         </li><!-- End Input Customer Nav -->
 
@@ -125,7 +125,7 @@
     <main id="main" class="main">
 
       <div class="pagetitle">
-        <h1>Input Transaksi</h1>
+        <h1>Input Customer</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="dashboard_pegawai.html">Home</a></li>

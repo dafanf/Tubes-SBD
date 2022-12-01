@@ -107,7 +107,7 @@
         <li class="nav-item">
           <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPegawai/customer_transaction">
             <i class="bi bi-journal-text"></i>
-            <span>Input Transaksi</span>
+            <span>Input Customer</span>
           </a>
         </li><!-- End Input Customer Nav -->
 
