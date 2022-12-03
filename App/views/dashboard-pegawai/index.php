@@ -140,13 +140,24 @@
                     </thead>
                     <tbody>
                       <?php foreach( $data as $transaksi) : ?>
+                        <?php
+                          if($transaksi['STATUS'] == 'Dikerjakan'){
+                            $status_badge = "bg-danger";
+                          }
+                          elseif($transaksi['STATUS'] == 'Selesai'){
+                            $status_badge = "bg-success";
+                          }
+                          elseif($transaksi['STATUS'] == 'Menunggu'){
+                            $status_badge = "bg-warning ";
+                          }
+                        ?>
                         <tr>
                           <th scope="row"><a href="#"><?= $transaksi['ID']; ?></a></th>
                           <td><?= $transaksi['NAMA'] ;?></td>
                           <td><a href="#" class="text-primary"><?= $transaksi['JUMLAH_LAUNDRY'] ;?></a></td>
                           <td><?= $transaksi['TGL_DIMULAI'] ;?></td>
                           <td><?= $transaksi['TGL_BERAKHIR'] ;?></td>
-                          <td><span class="badge rounded-pill bg-primary"><?= $transaksi['STATUS'] ;?></span></td>
+                          <td><span class="badge rounded-pill <?= $status_badge;?>"><?= $transaksi['STATUS'] ;?></span></td>
                           <td><a href="<?= BASEURL; ?>/dashboardpegawai/input_transaction" class="badge rounded-pill bg-primary">Submit</a></td>
                         </tr>
                       <?php endforeach;?>
