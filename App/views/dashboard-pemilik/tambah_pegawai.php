@@ -103,13 +103,13 @@
               <!-- Multi Columns Form -->
               <form class="row g-3">
                 <div class="col-md-12">
-                  <label for="inputText" class="form-label">Id</label>
-                  <input type="text" class="form-control" id="inputId">
-                </div> 
-                <div class="col-md-12">
                   <label for="inputName" class="form-label">Nama</label>
                   <input type="text" class="form-control" id="inputName">
                 </div> 
+                <div class="col-12">
+                  <label for="inputText" class="form-label">Position</label>
+                  <input type="text" class="form-control" id="inputPosition" placeholder="Pegawai">
+                </div>
                 <div class="col-12">
                   <label for="inputText" class="form-label">Email</label>
                   <input type="text" class="form-control" id="inputEmail" placeholder="dhafin@gmail.com">
@@ -143,3 +143,25 @@
     </main><!-- End #main -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

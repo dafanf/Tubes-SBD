@@ -276,47 +276,24 @@
                       <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Pelanggan</th>
-                        <th scope="col">Produk</th>
-                        <th scope="col">Harga</th>
+                        <th scope="col">Jumlah Laundry</th>
+                        <th scope="col">Tanggal Dimulai</th>
+                        <th scope="col">Tanggal Selesai</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Submit</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <?php foreach( $data as $transaksi) : ?>
                       <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>Brandon Jacob</td>
-                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                        <td>$64</td>
-                        <td><span class="badge rounded-pill bg-success">Selesai</span></td>
+                        <th scope="row"><a href="#"><?= $transaksi['id']; ?></a></th>
+                        <td><?= $transaksi['nama_pelanggan']; ?></td>
+                        <td><a href="#" class="text-primary"><?= $transaksi['jumlah_laundry']; ?></a></td>
+                        <td><?= $transaksi['TGL_DIMULAI']; ?></td>
+                        <td><?= $transaksi['TGL_BERAKHIR']; ?></td>
+                        <td><span class="badge rounded-pill bg-primary"><?= $transaksi['STATUS']; ?></span></td>
                       </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2147</a></th>
-                        <td>Bridie Kessler</td>
-                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                        <td>$47</td>
-                        <td><span class="badge rounded-pill bg-warning">Dalam Pekerjaan</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2049</a></th>
-                        <td>Ashleigh Langosh</td>
-                        <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                        <td>$147</td>
-                        <td><span class="badge rounded-pill bg-success">Selesai</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Angus Grady</td>
-                        <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                        <td>$67</td>
-                        <td><span class="badge rounded-pill bg-danger">Ditolak</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Raheem Lehner</td>
-                        <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                        <td>$165</td>
-                        <td><span class="badge rounded-pill bg-success">Selesai</span></td>
-                      </tr>
+                    <?php endforeach;?>
                     </tbody>
                   </table>
 
