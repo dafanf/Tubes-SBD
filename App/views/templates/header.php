@@ -28,6 +28,9 @@
 
   <!-- Template Main CSS File -->
   <link href="<?= BASEURL; ?>/css/style.css" rel="stylesheet">
+  <!-- Datepicker -->
+  <link rel="stylesheet" type="text/css" href="assets/datepicker/css/gijgo.css">
+  <script type="text/javascript" charset="utf8" src="assets/datepicker/js/gijgo.js"></script>
 </head>
 
 <body>

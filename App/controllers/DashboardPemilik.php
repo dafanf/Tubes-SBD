@@ -9,11 +9,11 @@ class DashboardPemilik extends Controller{
     }
 
     public function tambah_pegawai(){
-
         if( $this->model('User_Model')->tambahUser($_POST) > 0){
             header('Location'. BASEURL .'/dashboard-pemilik/tambah_pegawai');
             exit;
         }
+
         $data['judul'] = 'Tambah Pegawai';
         $this->view('templates/header', $data);
         $this->view('dashboard-pemilik/tambah_pegawai');

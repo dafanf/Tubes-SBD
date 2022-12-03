@@ -123,6 +123,14 @@
                   <label for="inputNumber" class="form-label">Outlet Id</label>
                   <input type="text" class="form-control" id="inputOutletId">
                 </div> 
+                <div class="col-md-12">
+                  <label for="inputTgl_new" class="form-label">Tanggal Baru</label>
+                  <td><input type="date" id="inputTgl_new" class="form-control" name="inputTgl_new"></td>
+                </div> 
+                <div class="col-md-12">
+                  <label for="inputTgl_Update" class="form-label">Tanggal Update</label>
+                  <td><input type="date" id="inputTgl_update" class="form-control" name="inputTgl_update"></td>
+                </div> 
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>
@@ -165,3 +173,4 @@
     </div>
   </div>
 </div>
+
