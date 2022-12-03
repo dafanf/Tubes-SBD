@@ -103,7 +103,7 @@
               <!-- Multi Columns Form -->
               <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_pegawai">
               <div class="col-md-12">
-                  <label for="inputName" class="form-label">Id</label>
+                  <label for="inputUserId" class="form-label">Id</label>
                   <input type="text" class="form-control" name="inputUserId" id="inputUserId">
                 </div>
                 <div class="col-md-12">

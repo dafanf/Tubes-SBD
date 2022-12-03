@@ -99,14 +99,14 @@
 
         <li class="nav-item">
           <a class="nav-link " href="<?= BASEURL; ?>/DashboardPegawai/input_transaction">
-            <i class="bi bi-journal-text"></i>
+            <i class="bi bi-cart-plus"></i>
             <span>Input Transaksi</span>
           </a>
         </li><!-- End Input Transaksi Nav -->
 
         <li class="nav-item">
           <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPegawai/customer_transaction">
-            <i class="bi bi-journal-text"></i>
+            <i class="bi bi-person-plus"></i>
             <span>Input Customer</span>
           </a>
         </li><!-- End Input Customer Nav -->
@@ -143,61 +143,58 @@
 
               <!-- Multi Columns Form -->
               <form class="row g-3">
-              <div class="col-md-12">
-                  <label for="inputName5" class="form-label">Transaksi Id</label>
-                  <input type="text" class="form-control" id="inputName5">
-                </div>
                 <div class="col-md-12">
-                  <label for="inputName5" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="inputName5">
+                  <label for="inputTransaksiId" class="form-label">Transaksi Id</label>
+                  <input type="text" class="form-control" id="inputTransaksiId" name="inputTransaksiId">
                 </div>
-                <div class="col-md-12">
-                  <label for="inputText" class="form-label">NIK</label>
-                  <input type="text" class="form-control" id="inputNIK5">
-                </div>  
-                <div class="col-12">
-                  <label for="inputAddress5" class="form-label">Alamat</label>
-                  <input type="text" class="form-control" id="inputAddres5s" placeholder="Jl.Senang No.123">
-                </div>
-                <div class="col-md-12">
-                  <label for="inputText" class="form-label">No Telepon</label>
-                  <input type="text" class="form-control" id="inputNoTelp">
-                </div>
-                <div class="col-md-12">
-                  <label for="inputType" class="form-label">Jenis Pakaian</label><br>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="baju">
-                    <label class="form-check-label" for="baju">Baju</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="kemaja">
-                    <label class="form-check-label" for="Kemeja">Kemeja</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="kaus">
-                    <label class="form-check-label" for="kaus">Kaus</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="jubah">
-                    <label class="form-check-label" for="jubah">Jubah</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="celana">
-                    <label class="form-check-label" for="celana">Celana</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="rok">
-                    <label class="form-check-label" for="rok">Rok</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="pakaian-dalam">
-                    <label class="form-check-label" for="pakaian-dalam">Pakaian Dalam</label>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <label for="inputNumber" class="form-label">Kuantitas</label>
-                  <input type="number" class="form-control" id="inputWeight">
+                <div class="col-md-2">
+                  <label for="inputJumlah" class="form-label">Jumlah laundry</label>
+                  <input type="number" class="form-control" id="inputJumlah" name="inputJumlah">
                 </div> 
+                <div class="col-md-12">
+                  <label for="inputTgl_mulai" class="form-label">Tanggal Dimulai</label>
+                  <td><input type="date" id="inputTgl_dimulai" class="form-control" name="inputTgl_dimulai"></td>
+                </div> 
+                <div class="col-md-12">
+                  <label for="inputTgl_berakhir" class="form-label">Tanggal Berakhir</label>
+                  <td><input type="date" id="inputTgl_berakhir" class="form-control" name="inputTgl_berakhir"></td>
+                </div>
+                <div class="col-md-12">Status
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="inputDikerjakan" id="inputDikerjakan">
+                    <label class="form-check-label" for="inputDikerjakan">
+                      Dikerjakan
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="inputMenunggu" id="inputMenunggu">
+                    <label class="form-check-label" for="inputMenunggu">
+                      Menunggu
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="inputSelesai" id="inputSelesai">
+                    <label class="form-check-label" for="inputSelesai">
+                      Selesai
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label for="inputTgl_new" class="form-label">Tanggal Dibuat</label>
+                  <td><input type="date" id="inputTgl_new" class="form-control" name="inputTgl_new"></td>
+                </div> 
+                <div class="col-md-12">
+                  <label for="inputTgl_Update" class="form-label">Tanggal Update</label>
+                  <td><input type="date" id="inputTgl_update" class="form-control" name="inputTgl_update"></td>
+                </div>
+                <div class="col-md-12">
+                  <label for="inputOutletId" class="form-label">Outlet Id</label>
+                  <input type="text" class="form-control" name="inputOutletId" id="inputOutletId">
+                </div> 
+                <div class="col-12">
+                  <label for="inputCustomerId" class="form-label">Customer Id</label>
+                  <input type="text" class="form-control" id="inputCustomerId" name="inputCustomerId">
+                </div>
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>

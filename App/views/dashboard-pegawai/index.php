@@ -65,15 +65,15 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPegawai/input_transaction">
-          <i class="bi bi-journal-text"></i>
+          <i class="bi bi-cart-plus"></i>
           <span>Input Transaksi</span>
         </a>
       </li><!-- End Input Transaksi Nav -->
 
       <li class="nav-item">
           <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPegawai/customer_transaction">
-            <i class="bi bi-journal-text"></i>
-            <span>Input Transaksi</span>
+            <i class="bi bi-person-plus"></i>
+            <span>Input Customer</span>
           </a>
       </li><!-- End Input Customer Nav -->
 
