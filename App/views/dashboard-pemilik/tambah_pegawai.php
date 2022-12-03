@@ -101,27 +101,22 @@
             <div class="row">
 
               <!-- Multi Columns Form -->
-              <form class="row g-3">
+              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_pegawai">
+              <div class="col-md-12">
+                  <label for="inputName" class="form-label">Id</label>
+                  <input type="text" class="form-control" name="inputUserId" id="inputUserId">
+                </div>
                 <div class="col-md-12">
                   <label for="inputName" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="inputName">
+                  <input type="text" class="form-control" name="inputName" id="inputName">
                 </div> 
                 <div class="col-12">
-                  <label for="inputText" class="form-label">Position</label>
-                  <input type="text" class="form-control" id="inputPosition" placeholder="Pegawai">
-                </div>
-                <div class="col-12">
-                  <label for="inputText" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="inputEmail" placeholder="dhafin@gmail.com">
-                </div>
-                <div class="col-12">
-                  <label for="inputFoto" class="form-label">Foto</label>
-                  <input type="file" class="form-control" id="inputFoto"><br>
-                  <input type="submit" value="submit">
+                  <label for="inputEmail" class="form-label">Email</label>
+                  <input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="dhafin@gmail.com">
                 </div>
                 <div class="col-md-12">
-                  <label for="inputNumber" class="form-label">Outlet Id</label>
-                  <input type="text" class="form-control" id="inputOutletId">
+                  <label for="inputOutletId" class="form-label">Outlet Id</label>
+                  <input type="text" class="form-control" name="inputOutletId" id="inputOutletId">
                 </div> 
                 <div class="col-md-12">
                   <label for="inputTgl_new" class="form-label">Tanggal Baru</label>
@@ -130,7 +125,11 @@
                 <div class="col-md-12">
                   <label for="inputTgl_Update" class="form-label">Tanggal Update</label>
                   <td><input type="date" id="inputTgl_update" class="form-control" name="inputTgl_update"></td>
-                </div> 
+                </div>
+                <div class="col-md-12">
+                  <label for="inputAkunId" class="form-label">Akun Id</label>
+                  <input type="number" class="form-control" name="inputAkunId" id="inputAkunId">
+                </div>  
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>

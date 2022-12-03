@@ -64,7 +64,7 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= BASEURL;?>/DashboardPemilik/tambah_pegawai">
+        <a class="nav-link collapsed" href="<?= BASEURL;?>/DashboardPemilik/tambah_pegawai_page">
           <i class="bi bi-person"></i>
           <span>Tambah Pegawai</span>
         </a>
@@ -280,15 +280,14 @@
                         <th scope="col">Tanggal Dimulai</th>
                         <th scope="col">Tanggal Selesai</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Submit</th>
                       </tr>
                     </thead>
                     <tbody>
                       <?php foreach( $data as $transaksi) : ?>
                       <tr>
-                        <th scope="row"><a href="#"><?= $transaksi['id']; ?></a></th>
-                        <td><?= $transaksi['nama_pelanggan']; ?></td>
-                        <td><a href="#" class="text-primary"><?= $transaksi['jumlah_laundry']; ?></a></td>
+                        <th scope="row"><a href="#"><?= $transaksi['ID']; ?></a></th>
+                        <td><?= $transaksi['NAMA']; ?></td>
+                        <td><a href="#" class="text-primary"><?= $transaksi['JUMLAH_LAUNDRY']; ?></a></td>
                         <td><?= $transaksi['TGL_DIMULAI']; ?></td>
                         <td><?= $transaksi['TGL_BERAKHIR']; ?></td>
                         <td><span class="badge rounded-pill bg-primary"><?= $transaksi['STATUS']; ?></span></td>
