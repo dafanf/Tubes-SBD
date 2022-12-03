@@ -7,8 +7,9 @@
         }
 
         public function tambahUser($data){
-            $query = "BEGIN entry_pengguna(:id,:name,:email,:tgl_new,:tgl_updt,:idOut,:idAkun); END;";
-
+            $query = 'BEGIN 
+                        entry_pengguna(:id,:name,:email,:tgl_new,:tgl_updt,:idOut,:idAkun); 
+                      END;';
             $this->db->query($query);
             $this->db->bind('id', $data['inputUserId']);
             $this->db->bind('name', $data['inputName']);

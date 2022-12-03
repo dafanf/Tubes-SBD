@@ -64,13 +64,14 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link " href="tambah_pegawai.html">
+        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_pegawai_page">
           <i class="bi bi-person"></i>
           <span>Tambah Pegawai</span>
         </a>
+      </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet">
+        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet">
           <i class="bi bi-building"></i>
           <span>Tambah Outlet</span>
         </a>
@@ -80,7 +81,6 @@
           <i class="bi bi-cash-stack"></i>
           <span>Tambah Harga Laundry</span>
         </a>
-
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
@@ -97,11 +97,11 @@
     <main id="main" class="main">
 
       <div class="pagetitle">
-        <h1>Tambah Pegawai</h1>
+        <h1>Tambah Outlet</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Tambah Pegawai</li>
+            <li class="breadcrumb-item active">Tambah Outlet</li>
           </ol>
         </nav>
       </div><!-- End Page Title -->
@@ -114,35 +114,31 @@
             <div class="row">
 
               <!-- Multi Columns Form -->
-              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_pegawai">
+              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_outlet">
               <div class="col-md-12">
-                  <label for="inputUserId" class="form-label">Id</label>
+                  <label for="inputOutletId" class="form-label">Id</label>
                   <input type="text" class="form-control" name="inputUserId" id="inputUserId">
                 </div>
                 <div class="col-md-12">
-                  <label for="inputName" class="form-label">Nama</label>
-                  <input type="text" class="form-control" name="inputName" id="inputName">
+                  <label for="inputNamaOut" class="form-label">Nama</label>
+                  <input type="text" class="form-control" name="inputNamaOut" id="inputNamaOut">
                 </div> 
                 <div class="col-12">
-                  <label for="inputEmail" class="form-label">Email</label>
-                  <input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="dhafin@gmail.com">
+                  <label for="inputStatusOut" class="form-label">Status</label>
+                  <input type="text" class="form-control" name="inputStatusOut" id="inputStatusOut" placeholder="Buka/Tutup">
                 </div>
                 <div class="col-md-12">
-                  <label for="inputOutletId" class="form-label">Outlet Id</label>
-                  <input type="text" class="form-control" name="inputOutletId" id="inputOutletId">
+                  <label for="inputAlamatOut" class="form-label">Alamat</label>
+                  <input type="text" class="form-control" name="inputAlamatOut" id="inputAlamatOut">
                 </div> 
                 <div class="col-md-12">
-                  <label for="inputTgl_new" class="form-label">Tanggal Baru</label>
-                  <td><input type="date" id="inputTgl_new" class="form-control" name="inputTgl_new"></td>
-                </div>
+                  <label for="inputTgl_new_out" class="form-label">Tanggal Submit</label>
+                  <td><input type="date" id="inputTgl_new_out" class="form-control" name="inputTgl_new_out"></td>
+                </div> 
                 <div class="col-md-12">
-                  <label for="inputTgl_Update" class="form-label">Tanggal Update</label>
-                  <td><input type="date" id="inputTgl_update" class="form-control" name="inputTgl_update"></td>
+                  <label for="inputTgl_Update_out" class="form-label">Tanggal Update</label>
+                  <td><input type="date" id="inputTgl_update_out" class="form-control" name="inputTgl_update_out"></td>
                 </div>
-                <div class="col-md-12">
-                  <label for="inputAkunId" class="form-label">Akun Id</label>
-                  <input type="number" class="form-control" name="inputAkunId" id="inputAkunId">
-                </div>  
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>

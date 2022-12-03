@@ -14,8 +14,23 @@ class DashboardPemilik extends Controller{
         $this->view('dashboard-pemilik/tambah_pegawai');
         $this->view('templates/footer');
     }
+
+    public function tambah_outlet(){
+        $header['judul'] = 'Tambah Outlet';
+        $this->view('templates/header', $header);
+        $this->view('dashboard-pemilik/tambah_outlet');
+        $this->view('templates/footer');
+    }
+
+    public function tambah_harga_laundry(){
+        $header['judul'] = 'Tambah Harga Laundry';
+        $this->view('templates/header', $header);
+        $this->view('dashboard-pemilik/tambah_harga_laundry');
+        $this->view('templates/footer');
+    }
+
     public function tambah_pegawai(){
-        // $testInput = $this->model('User_model')->tambahUser($_POST);
+        $testInput = $this->model('User_model')->tambahUser($_POST);
         var_dump($_POST);
 
         // if( $this->model('User_Model')->tambahUser($_POST) > 0){

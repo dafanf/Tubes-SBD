@@ -68,6 +68,19 @@
           <i class="bi bi-person"></i>
           <span>Tambah Pegawai</span>
         </a>
+
+        <li class="nav-item">
+        <a class="nav-link collapsed" href="<?= BASEURL;?>/DashboardPemilik/tambah_outlet">
+          <i class="bi bi-building"></i>
+          <span>Tambah Outlet</span>
+        </a>
+
+        <li class="nav-item">
+        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry">
+          <i class="bi bi-cash-stack"></i>
+          <span>Tambah Harga Laundry</span>
+        </a>
+
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
