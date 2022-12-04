@@ -97,11 +97,11 @@
     <main id="main" class="main">
 
       <div class="pagetitle">
-        <h1>Tambah Outlet</h1>
+        <h1>Tambah Harga Laundry</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Tambah Outlet</li>
+            <li class="breadcrumb-item active">Tambah Harga Laundry</li>
           </ol>
         </nav>
       </div><!-- End Page Title -->
