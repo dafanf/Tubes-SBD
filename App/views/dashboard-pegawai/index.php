@@ -194,41 +194,17 @@
                       <tr>
                         <th scope="col">Produk</th>
                         <th scope="col">Harga</th>
-                        <th scope="col">Terjual</th>
-                        <th scope="col">Pendapatan</th>
+                        <th scope="col">Tanggal Update</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <?php foreach ($data2 as $harga): ?>
                       <tr>
-                        <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                        <td>$64</td>
-                        <td class="fw-bold">124</td>
-                        <td>$5,828</td>
+                        <td><a href="#" class="text-primary fw-bold"><?= $harga['NAMA']; ?></a></td>
+                        <td><?= $harga['HARGA'];?></td>
+                        <td class="fw-bold"><?= $harga['TGL_UPDATE']?></td>
                       </tr>
-                      <tr>
-                        <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
-                        <td>$46</td>
-                        <td class="fw-bold">98</td>
-                        <td>$4,508</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-                        <td>$59</td>
-                        <td class="fw-bold">74</td>
-                        <td>$4,366</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-                        <td>$32</td>
-                        <td class="fw-bold">63</td>
-                        <td>$2,016</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
-                        <td>$79</td>
-                        <td class="fw-bold">41</td>
-                        <td>$3,239</td>
-                      </tr>
+                      <?php endforeach; ?>
                     </tbody>
                   </table>
 

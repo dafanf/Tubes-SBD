@@ -2,9 +2,12 @@
 class DashboardPegawai extends Controller{
     public function index(){
         $header['judul'] = 'Dashboard Pegawai';
-        $data = $this->model('Transaksi_model')->getAllTransaksi();
+        $data_transaksi = $this->model('Transaksi_model')->getAllTransaksi();
+        $data_harga_laundry = $this->model('Transaksi_model')->getAllHargaJenisLaundry();
+        $data = array_merge($data_transaksi, $data_harga_laundry);
+        // var_dump($data);
         $this->view('templates/header', $header);
-        $this->view('dashboard-pegawai/index', $data);
+        $this->view('dashboard-pegawai/index', $data_transaksi, $data_harga_laundry);
         $this->view('templates/footer');
     }
 
