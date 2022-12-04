@@ -137,7 +137,7 @@
                         <th scope="col">Tanggal Dimulai</th>
                         <th scope="col">Tanggal Selesai</th>
                         <th scope="col">Status</th>
-                        <th scope="col-3">Submit</th>
+                        <th scope="col-3" colspan="3">Submit</th>
                       </tr>
                     </thead>
                     <tbody>
