@@ -109,8 +109,9 @@
             <!-- Recent Sales -->
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
+                  <div class="filter">
+                  <button class="me-3 btn btn-primary">Tambah</button>
 
-                <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-header text-start">
@@ -122,6 +123,7 @@
                     <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
                   </ul>
                 </div>
+               
 
                 <div class="card-body">
                   <h5 class="card-title">Transaksi <span>| Bulan Ini</span></h5>
