@@ -137,7 +137,7 @@
                         <th scope="col">Tanggal Dimulai</th>
                         <th scope="col">Tanggal Selesai</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Submit</th>
+                        <th scope="col-3">Submit</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -161,6 +161,8 @@
                           <td><?= $transaksi['TGL_BERAKHIR'] ;?></td>
                           <td><span class="badge rounded-pill <?= $status_badge;?>"><?= $transaksi['STATUS'] ;?></span></td>
                           <td><a href="<?= BASEURL; ?>/dashboardpegawai/input_transaction" class="badge rounded-pill bg-primary">Submit</a></td>
+                          <td><a href="#" class="badge rounded-pill bg-info">Edit</a></td>
+                          <td><a href="#" class="badge rounded-pill bg-secondary">Delete</a></td>
                         </tr>
                       <?php endforeach;?>
                     </tbody>
