@@ -52,10 +52,10 @@ class DashboardPemilik extends Controller{
     }
 
     public function tambah_outlets(){
-        $testOutlets = $this->model('Akun_model')->tambahOutlets($_POST);
+        $testOutlets = $this->model('Outlets_model')->tambahOutlets($_POST);
 
         if($testOutlets > 0){
-            header('Location'. BASEURL.'/dashboar-pemilik/tambah_outlet_page');
+            header('Location: '. BASEURL .'/dashboardpemilik/tambah_outlet_page');
             exit;
         }
     }

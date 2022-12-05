@@ -39,5 +39,9 @@ class DashboardPegawai extends Controller{
             exit;
         }
     }
+
+    public function transaction_insert(){
+        var_dump($_POST);
+    }
 }
 ?>

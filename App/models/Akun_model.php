@@ -42,9 +42,9 @@
         }
 
         public function tambahOutlets($data){
-            $query = 'BEGIN 
+            $query = "BEGIN 
                         entry_outlets(:id,:outname,:stat,:alamat,:no_tlp, :tgl_new,:tgl_updt); 
-                      END;';
+                      END;";
             $this->db->query($query);
             $this->db->bind('id', $data['inputOutletId']);
             $this->db->bind('outname', $data['inputNamaOut']);

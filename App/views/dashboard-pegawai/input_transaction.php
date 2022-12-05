@@ -142,7 +142,7 @@
             <div class="row">
 
               <!-- Multi Columns Form -->
-              <form class="row g-3">
+              <form class="row g-3" method="post" action="<?= BASEURL; ?>/dashboardpegawai/transaction_insert">
                 <div class="col-md-12">
                   <label for="inputTransaksiId" class="form-label">Transaksi Id</label>
                   <input type="text" class="form-control" id="inputTransaksiId" name="inputTransaksiId">
