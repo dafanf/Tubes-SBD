@@ -30,13 +30,11 @@ class DashboardPemilik extends Controller{
     }
 
     public function tambah_pegawai(){
-        $testInput = $this->model('User_model')->tambahUser($_POST);
-        var_dump($_POST);
-
-        // if( $this->model('User_Model')->tambahUser($_POST) > 0){
-        //     header('Location'. BASEURL .'/dashboard-pemilik/tambah_pegawai_page');
-        //     exit;
-        // }
+        $testInput = $this->model('Akun_model')->tambahUser($_POST);
+        if( $testInput > 0){
+            header('Location: '. BASEURL .'/dashboardpemilik/tambah_pegawai_page');
+            exit;
+        }
     }
     public function transaksi(){
         
