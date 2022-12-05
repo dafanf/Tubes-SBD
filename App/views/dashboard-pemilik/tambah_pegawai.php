@@ -64,6 +64,12 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed " href="<?= BASEURL; ?>/DashboardPemilik/tambah_akun_page">
+          <i class="bi bi-person"></i>
+          <span>Tambah Akun</span>
+        </a>
+
+      <li class="nav-item">
         <a class="nav-link " href="tambah_pegawai.html">
           <i class="bi bi-person"></i>
           <span>Tambah Pegawai</span>
@@ -81,11 +87,7 @@
           <span>Tambah Harga Laundry</span>
         </a>
 
-        <li class="nav-item">
-        <a class="nav-link collapsed " href="<?= BASEURL; ?>/DashboardPemilik/tambah_akun_page">
-          <i class="bi bi-person"></i>
-          <span>Tambah Akun</span>
-        </a>
+        
 
       </li><!-- End Profile Page Nav -->
 

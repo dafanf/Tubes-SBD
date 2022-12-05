@@ -41,6 +41,20 @@
             return $this->db->rowCount();
         }
 
+        public function tambahAkun($data){
+            $query = "BEGIN 
+                        entry_akun (:uname,:pw,:idAkun,:stat); 
+                      END;";
+            $this->db->query($query);
+            $this->db->bind('uname', $data['inputUsername']);
+            $this->db->bind('pw', $data['inputPass']);
+            $this->db->bind('idAkun', $data['inputStatusAkun']);
+            $this->db->bind('stat', $data['inputStatusAkun']);
+            $this->db->execute();
+
+            return $this->db->rowCount();
+        }
+
         public function tambahOutlets($data){
             $query = "BEGIN 
                         entry_outlets(:id,:outname,:stat,:alamat,:no_tlp, :tgl_new,:tgl_updt); 

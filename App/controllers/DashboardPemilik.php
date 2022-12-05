@@ -51,6 +51,19 @@ class DashboardPemilik extends Controller{
         }
     }
 
+    public function tambah_akun(){
+        $testAkun = $this->model('Akun_model')->tambahAkun($_POST);
+        if( $testAkun > 0){
+            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            header('Location: '. BASEURL .'/dashboardpemilik/tambah_akun_page');
+            exit;
+        }else{
+            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+            header('Location: '. BASEURL .'/dashboardpemilik/tambah_akun_page');
+            exit;
+        }
+    }
+    
     public function tambah_outlets(){
         $testOutlets = $this->model('Outlets_model')->tambahOutlets($_POST);
 
