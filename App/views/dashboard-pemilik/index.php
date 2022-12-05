@@ -81,6 +81,12 @@
           <span>Tambah Harga Laundry</span>
         </a>
 
+        <li class="nav-item">
+        <a class="nav-link collapsed " href="<?= BASEURL; ?>/DashboardPemilik/tambah_akun_page">
+          <i class="bi bi-person"></i>
+          <span>Tambah Akun</span>
+        </a>
+
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">

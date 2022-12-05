@@ -71,19 +71,19 @@
       </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet_page">
+        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet_page">
           <i class="bi bi-building"></i>
           <span>Tambah Outlet</span>
         </a>
 
         <li class="nav-item">
-        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry_page">
+        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry_page">
           <i class="bi bi-cash-stack"></i>
           <span>Tambah Harga Laundry</span>
         </a>
 
         <li class="nav-item">
-        <a class="nav-link collapsed " href="<?= BASEURL; ?>/DashboardPemilik/tambah_akun_page">
+        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_akun_page">
           <i class="bi bi-person"></i>
           <span>Tambah Akun</span>
         </a>
@@ -103,11 +103,11 @@
     <main id="main" class="main">
 
       <div class="pagetitle">
-        <h1>Tambah Harga Laundry</h1>
+        <h1>Tambah Akun</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Tambah Harga Laundry</li>
+            <li class="breadcrumb-item active">Tambah Akun</li>
           </ol>
         </nav>
       </div><!-- End Page Title -->
@@ -120,27 +120,23 @@
             <div class="row">
 
               <!-- Multi Columns Form -->
-              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_harga_laundry">
+              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_akun">
               <div class="col-md-12">
-                  <label for="inputHargaId" class="form-label">Id</label>
-                  <input type="text" class="form-control" name="inputHargaId" id="inputHargaId">
+                  <label for="inputUsername" class="form-label">Username</label>
+                  <input type="text" class="form-control" name="inputUsername" id="inputUsername">
                 </div>
                 <div class="col-md-12">
-                  <label for="inputHarga" class="form-label">Harga</label>
-                  <input type="text" class="form-control" name="inputHarga" id="inputHarga">
+                  <label for="inputPass" class="form-label">Password</label>
+                  <input type="text" class="form-control" name="inputPass" id="inputPass">
                 </div> 
                 <div class="col-12">
-                  <label for="inputJenisLaundry" class="form-label">Nama Jenis Laundry</label>
-                  <input type="text" class="form-control" name="inputJenisLaundry" id="inputJenisLaundry" placeholder="Baju, celana, selimut, etc.">
+                  <label for="inputIdAkun" class="form-label">Id Akun</label>
+                  <input type="text" class="form-control" name="inputIdAkun" id="inputIdAkun">
                 </div>
                 <div class="col-md-12">
-                  <label for="inputTgl_new_harga" class="form-label">Tanggal Submit</label>
-                  <td><input type="date" id="inputTgl_new_harga" class="form-control" name="inputTgl_new_harga"></td>
+                  <label for="inputStatusAkun" class="form-label">Status</label>
+                  <input type="text" class="form-control" name="inputStatusAkun" id="inputStatusAkun">
                 </div> 
-                <div class="col-md-12">
-                  <label for="inputTgl_Update_harga" class="form-label">Tanggal Update</label>
-                  <td><input type="date" id="inputTgl_update_harga" class="form-control" name="inputTgl_update_harga"></td>
-                </div>
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>

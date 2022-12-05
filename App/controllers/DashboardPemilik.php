@@ -31,18 +31,30 @@ class DashboardPemilik extends Controller{
         $this->view('templates/footer');
     }
 
+    public function tambah_akun_page(){
+        $header['judul'] = 'Tambah Akun';
+        $this->view('templates/header', $header);
+        $this->view('dashboard-pemilik/tambah_akun');
+        $this->view('templates/footer');
+    }
+
     public function tambah_pegawai(){
         $testInput = $this->model('Akun_model')->tambahUser($_POST);
         if( $testInput > 0){
+            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            header('Location: '. BASEURL .'/dashboardpemilik/tambah_pegawai_page');
+            exit;
+        }else{
+            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
             header('Location: '. BASEURL .'/dashboardpemilik/tambah_pegawai_page');
             exit;
         }
     }
 
     public function tambah_outlets(){
-        $query = $this->model('Outlets_model')->tambahOutlets($_POST);
+        $testOutlets = $this->model('Akun_model')->tambahOutlets($_POST);
 
-        if($this->model('Outlets_model')->tambahModel($_POST) > 0){
+        if($testOutlets > 0){
             header('Location'. BASEURL.'/dashboar-pemilik/tambah_outlet_page');
             exit;
         }
