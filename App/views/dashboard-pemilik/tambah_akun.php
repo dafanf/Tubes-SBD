@@ -71,7 +71,7 @@
       </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet_page">
+        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet_page">
           <i class="bi bi-building"></i>
           <span>Tambah Outlet</span>
         </a>

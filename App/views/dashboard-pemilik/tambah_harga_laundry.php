@@ -84,6 +84,13 @@
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed " href="<?= BASEURL; ?>/DashboardPemilik/tambah_akun_page">
+          <i class="bi bi-person"></i>
+          <span>Tambah Akun</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link collapsed" confirm="Are you sure?" href="login.html">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Logout</span>
