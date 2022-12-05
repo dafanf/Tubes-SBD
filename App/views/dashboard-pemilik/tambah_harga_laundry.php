@@ -81,12 +81,6 @@
           <i class="bi bi-cash-stack"></i>
           <span>Tambah Harga Laundry</span>
         </a>
-
-        <li class="nav-item">
-        <a class="nav-link collapsed " href="<?= BASEURL; ?>/DashboardPemilik/tambah_akun_page">
-          <i class="bi bi-person"></i>
-          <span>Tambah Akun</span>
-        </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
@@ -120,7 +114,7 @@
             <div class="row">
 
               <!-- Multi Columns Form -->
-              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_harga_laundry">
+              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_harga">
               <div class="col-md-12">
                   <label for="inputHargaId" class="form-label">Id</label>
                   <input type="text" class="form-control" name="inputHargaId" id="inputHargaId">
@@ -129,10 +123,10 @@
                   <label for="inputHarga" class="form-label">Harga</label>
                   <input type="text" class="form-control" name="inputHarga" id="inputHarga">
                 </div> 
-                <div class="col-12">
+                <!-- <div class="col-12">
                   <label for="inputJenisLaundry" class="form-label">Nama Jenis Laundry</label>
                   <input type="text" class="form-control" name="inputJenisLaundry" id="inputJenisLaundry" placeholder="Baju, celana, selimut, etc.">
-                </div>
+                </div> -->
                 <div class="col-md-12">
                   <label for="inputTgl_new_harga" class="form-label">Tanggal Submit</label>
                   <td><input type="date" id="inputTgl_new_harga" class="form-control" name="inputTgl_new_harga"></td>

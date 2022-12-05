@@ -60,6 +60,16 @@ class DashboardPemilik extends Controller{
         }
     }
 
+    public function tambah_harga(){
+        $testHarga = $this->model('Harga_model')->tambahHargaLaundry($_POST);
+
+        if($testHarga > 0){
+            header('Location: '. BASEURL .'/dashboardpemilik/tambah_harga_laundry_page');
+            exit;
+        }
+    }
+
+
     public function transaksi(){
         
     }

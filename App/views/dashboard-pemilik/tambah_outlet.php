@@ -120,7 +120,7 @@
             <div class="row">
 
               <!-- Multi Columns Form -->
-              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_outlets">
+              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_outlets_page">
               <div class="col-md-12">
                   <label for="inputOutletId" class="form-label">Id</label>
                   <input type="text" class="form-control" name="inputOutletId" id="inputOutletId">
