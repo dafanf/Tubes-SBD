@@ -159,25 +159,14 @@
                   <label for="inputTgl_berakhir" class="form-label">Tanggal Berakhir</label>
                   <td><input type="date" id="inputTgl_berakhir" class="form-control" name="inputTgl_berakhir"></td>
                 </div>
-                <div class="col-md-12">Status
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="inputDikerjakan" id="inputDikerjakan">
-                    <label class="form-check-label" for="inputDikerjakan">
-                      Dikerjakan
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="inputMenunggu" id="inputMenunggu">
-                    <label class="form-check-label" for="inputMenunggu">
-                      Menunggu
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="inputSelesai" id="inputSelesai">
-                    <label class="form-check-label" for="inputSelesai">
-                      Selesai
-                    </label>
-                  </div>
+                <div class="form-group col-md-3">
+                  <label for="inputStatus">Status</label>
+                  <select class="form-control" id="inputStatus" placeholder="Baju">
+                    <option value="Pilih-status" disabled selected>Pilih status..</option>
+                    <option value="dikerjakan" >Dikerjakan</option>
+                    <option value="menunggu">Menunggu</option>
+                    <option value="selesai">Selesai</option>
+                  </select>
                 </div>
                 <div class="col-md-12">
                   <label for="inputTgl_new" class="form-label">Tanggal Dibuat</label>
