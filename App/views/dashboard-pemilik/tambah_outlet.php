@@ -18,13 +18,6 @@
             </a>
           </li><!-- End Search Icon-->
 
-          <li class="nav-item dropdown pe-3">
-
-            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-              <img src="<?= BASEURL; ?>/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-            </a><!-- End Profile Image Icon -->
-
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
               <li class="dropdown-header">
                 <h6>Kevin Anderson</h6>
@@ -137,11 +130,11 @@
                 </div>
                 <div class="col-md-12">
                   <label for="inputAlamatOut" class="form-label">Alamat</label>
-                  <input type="text" class="form-control" name="inputAlamatOut" id="inputAlamatOut">
+                  <input type="text" class="form-control" name="inputAlamatOut" id="inputAlamatOut" placeholder="Jalan/Apartment">
                 </div> 
                 <div class="col-md-12">
                   <label for="inputNoTelp" class="form-label">No Telepon</label>
-                  <input type="text" class="form-control" name="inputNoTelp" id="inputNoTelp">
+                  <input type="text" class="form-control" name="inputNoTelp" id="inputNoTelp" placeholder="08123xxxxxxxx">
                 </div> 
                 <div class="col-md-12">
                   <label for="inputTgl_new_out" class="form-label">Tanggal Submit</label>

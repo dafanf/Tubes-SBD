@@ -18,13 +18,6 @@
           </a>
         </li><!-- End Search Icon-->
 
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="<?= BASEURL; ?>/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-          </a><!-- End Profile Iamge Icon -->
-
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>Kevin Anderson</h6>
@@ -270,11 +263,10 @@
               </div>
             </div><!-- End Reports -->
 
-            <!-- Recent Sales -->
-            <div class="col-12">
+             <!-- Recent Sales -->
+             <div class="col-12">
               <div class="card recent-sales overflow-auto">
-
-                <div class="filter">
+                  <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-header text-start">
@@ -286,9 +278,10 @@
                     <li><a class="dropdown-item" href="#">Tahun Ini</a></li>
                   </ul>
                 </div>
+               
 
                 <div class="card-body">
-                  <h5 class="card-title">Transaksi <span>| Bulan Ini</span></h5>
+                  <h5 class="card-title">Transaksi <span></h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
@@ -303,15 +296,26 @@
                     </thead>
                     <tbody>
                       <?php foreach( $data as $transaksi) : ?>
-                      <tr>
-                        <th scope="row"><a href="#"><?= $transaksi['ID']; ?></a></th>
-                        <td><?= $transaksi['NAMA']; ?></td>
-                        <td><a href="#" class="text-primary"><?= $transaksi['JUMLAH_LAUNDRY']; ?></a></td>
-                        <td><?= $transaksi['TGL_DIMULAI']; ?></td>
-                        <td><?= $transaksi['TGL_BERAKHIR']; ?></td>
-                        <td><span class="badge rounded-pill bg-primary"><?= $transaksi['STATUS']; ?></span></td>
-                      </tr>
-                    <?php endforeach;?>
+                        <?php
+                          if($transaksi['STATUS'] == 'Dikerjakan'){
+                            $status_badge = "bg-danger";
+                          }
+                          elseif($transaksi['STATUS'] == 'Selesai'){
+                            $status_badge = "bg-success";
+                          }
+                          elseif($transaksi['STATUS'] == 'Menunggu'){
+                            $status_badge = "bg-warning ";
+                          }
+                        ?>
+                        <tr>
+                          <th scope="row"><a href="#"><?= $transaksi['ID']; ?></a></th>
+                          <td><?= $transaksi['NAMA'] ;?></td>
+                          <td><a href="#" class="text-primary"><?= $transaksi['JUMLAH_LAUNDRY'] ;?></a></td>
+                          <td><?= $transaksi['TGL_DIMULAI'] ;?></td>
+                          <td><?= $transaksi['TGL_BERAKHIR'] ;?></td>
+                          <td><span class="badge rounded-pill <?= $status_badge;?>"><?= $transaksi['STATUS'] ;?></span></td>
+                        </tr>
+                      <?php endforeach;?>
                     </tbody>
                   </table>
 
@@ -339,14 +343,14 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach( $data as $transaksi) : ?>
+                      <?php foreach( $data['akun'] as $akun) : ?>
                       <tr>
-                        <th scope="row"><a href="#"><?= $transaksi['ID']; ?></a></th>
-                        <td><?= $transaksi['NAMA']; ?></td>
-                        <td><a href="#" class="text-primary"><?= $transaksi['JUMLAH_LAUNDRY']; ?></a></td>
-                        <td><?= $transaksi['TGL_DIMULAI']; ?></td>
-                        <td><?= $transaksi['TGL_BERAKHIR']; ?></td>
-                        <td><span class="badge rounded-pill bg-primary"><?= $transaksi['STATUS']; ?></span></td>
+                        <th scope="row"><a href="#"><?= $akun['ID']; ?></a></th>
+                        <td><?= $akun['NAMA']; ?></td>
+                        <td><a href="#" class="text-primary"><?= $akun['EMAIL']; ?></a></td>
+                        <td><?= $akun['ID']; ?></td>
+                        <td><?= $akun['IDAKUN']; ?></td>
+                        <td><span class="badge rounded-pill bg-primary"><?= $akun['STATUS']; ?></span></td>
                       </tr>
                     <?php endforeach;?>
                     </tbody>
@@ -373,18 +377,21 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Alamat</th>
                         <th scope="col">No Telepon</th>
+                        <th scope="col">Tanggal Disubmit</th>
+                        <th scope="col">Tanggal Diupdate</th>
                         <th scope="col">Status</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach( $data as $transaksi) : ?>
+                      <?php foreach( $data as $outlet) : ?>
                       <tr>
-                        <th scope="row"><a href="#"><?= $transaksi['ID']; ?></a></th>
-                        <td><?= $transaksi['NAMA']; ?></td>
-                        <td><a href="#" class="text-primary"><?= $transaksi['JUMLAH_LAUNDRY']; ?></a></td>
-                        <td><?= $transaksi['TGL_DIMULAI']; ?></td>
-                        <td><?= $transaksi['TGL_BERAKHIR']; ?></td>
-                        <td><span class="badge rounded-pill bg-primary"><?= $transaksi['STATUS']; ?></span></td>
+                        <th scope="row"><a href="#"><?= $outlet['ID']; ?></a></th>
+                        <td><?= $outlet['NAMA']; ?></td>
+                        <td><a href="#" class="text-primary"><?= $outlet['ALAMAT']; ?></a></td>
+                        <td><?= $outlet['NO_TELP']; ?></td>
+                        <td><?= $outlet['TGL_DIBUAT']; ?></td>
+                        <td><?= $outlet['TGL_DIUPDATE']; ?></td>
+                        <td><span class="badge rounded-pill bg-primary"><?= $outlet['STATUS']; ?></span></td>
                       </tr>
                     <?php endforeach;?>
                     </tbody>

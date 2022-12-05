@@ -48,7 +48,7 @@
             $this->db->query($query);
             $this->db->bind('uname', $data['inputUsername']);
             $this->db->bind('pw', $data['inputPass']);
-            $this->db->bind('idAkun', $data['inputStatusAkun']);
+            $this->db->bind('idAkun', $data['inputIdAkun']);
             $this->db->bind('stat', $data['inputStatusAkun']);
             $this->db->execute();
 
@@ -70,6 +70,20 @@
             $this->db->execute();
 
             return $this->db->rowCount();
+        }
+
+        public function getAllOutlets(){
+            $query = "SELECT * FROM OUTLETS_VIEW";
+            $this->db->query($query);
+            $this->db->execute();
+            return $this->db->resultSet();
+        }
+        
+        public function getAllAkun(){
+            $query = "SELECT * FROM AKUN_VIEW";
+            $this->db->query($query);
+            $this->db->execute();
+            return $this->db->resultSet();
         }
     }
 ?>
