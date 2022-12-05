@@ -142,7 +142,7 @@
             <div class="row">
 
               <!-- Multi Columns Form -->
-              <form class="row g-3">
+              <form class="row g-3" method="post", action="<?= BASEURL; ?>/dashboardpegawai/customer_transaction_input">
                 <div class="col-12">
                   <label for="inputCustomerId" class="form-label">Customer Id</label>
                   <input type="text" class="form-control" id="inputCustomerId" name="inputCustomerId">

@@ -110,7 +110,7 @@
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
                   <div class="filter">
-                  <button class="me-3 btn btn-primary">Tambah</button>
+                  <button class="me-3 btn btn-primary" onclick="location.href='<?= BASEURL;?>/dashboardpegawai/customer_transaction'">Tambah</button>
 
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">

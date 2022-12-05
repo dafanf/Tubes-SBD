@@ -31,5 +31,13 @@ class DashboardPegawai extends Controller{
         $this->view('dashboard-pegawai/customer_transaction');
         $this->view('templates/footer');
     }
+
+    public function customer_transaction_input(){
+        $testCustomer = $this->model('Customer_model')->insertCustomer($_POST);
+        if( $testCustomer > 0){
+            header('Location: '. BASEURL .'/dashboardpegawai/customer_transaction');
+            exit;
+        }
+    }
 }
 ?>
