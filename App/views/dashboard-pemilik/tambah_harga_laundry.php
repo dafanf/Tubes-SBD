@@ -71,13 +71,13 @@
       </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet">
+        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet_page">
           <i class="bi bi-building"></i>
           <span>Tambah Outlet</span>
         </a>
 
         <li class="nav-item">
-        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry">
+        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry_page">
           <i class="bi bi-cash-stack"></i>
           <span>Tambah Harga Laundry</span>
         </a>
@@ -116,8 +116,8 @@
               <!-- Multi Columns Form -->
               <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_harga_laundry">
               <div class="col-md-12">
-                  <label for="inputOutletId" class="form-label">Id</label>
-                  <input type="text" class="form-control" name="inputUserId" id="inputUserId">
+                  <label for="inputHargaId" class="form-label">Id</label>
+                  <input type="text" class="form-control" name="inputHargaId" id="inputHargaId">
                 </div>
                 <div class="col-md-12">
                   <label for="inputHarga" class="form-label">Harga</label>
@@ -128,12 +128,12 @@
                   <input type="text" class="form-control" name="inputJenisLaundry" id="inputJenisLaundry" placeholder="Baju, celana, selimut, etc.">
                 </div>
                 <div class="col-md-12">
-                  <label for="inputTgl_new_out" class="form-label">Tanggal Submit</label>
-                  <td><input type="date" id="inputTgl_new_out" class="form-control" name="inputTgl_new_out"></td>
+                  <label for="inputTgl_new_harga" class="form-label">Tanggal Submit</label>
+                  <td><input type="date" id="inputTgl_new_harga" class="form-control" name="inputTgl_new_harga"></td>
                 </div> 
                 <div class="col-md-12">
-                  <label for="inputTgl_Update_out" class="form-label">Tanggal Update</label>
-                  <td><input type="date" id="inputTgl_update_out" class="form-control" name="inputTgl_update_out"></td>
+                  <label for="inputTgl_Update_harga" class="form-label">Tanggal Update</label>
+                  <td><input type="date" id="inputTgl_update_harga" class="form-control" name="inputTgl_update_harga"></td>
                 </div>
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>

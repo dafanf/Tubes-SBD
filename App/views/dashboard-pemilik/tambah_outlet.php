@@ -71,13 +71,13 @@
       </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet">
+        <a class="nav-link " href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet_page">
           <i class="bi bi-building"></i>
           <span>Tambah Outlet</span>
         </a>
 
         <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry">
+        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry_page">
           <i class="bi bi-cash-stack"></i>
           <span>Tambah Harga Laundry</span>
         </a>
@@ -114,10 +114,10 @@
             <div class="row">
 
               <!-- Multi Columns Form -->
-              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_outlet">
+              <form class="row g-3" method="post" action="<?= BASEURL;?>/dashboardpemilik/tambah_outlets">
               <div class="col-md-12">
                   <label for="inputOutletId" class="form-label">Id</label>
-                  <input type="text" class="form-control" name="inputUserId" id="inputUserId">
+                  <input type="text" class="form-control" name="inputOutletId" id="inputOutletId">
                 </div>
                 <div class="col-md-12">
                   <label for="inputNamaOut" class="form-label">Nama</label>
@@ -130,6 +130,10 @@
                 <div class="col-md-12">
                   <label for="inputAlamatOut" class="form-label">Alamat</label>
                   <input type="text" class="form-control" name="inputAlamatOut" id="inputAlamatOut">
+                </div> 
+                <div class="col-md-12">
+                  <label for="inputNoTelp" class="form-label">No Telepon</label>
+                  <input type="text" class="form-control" name="inputNoTelp" id="inputNoTelp">
                 </div> 
                 <div class="col-md-12">
                   <label for="inputTgl_new_out" class="form-label">Tanggal Submit</label>

@@ -1,6 +1,5 @@
 <?php
     class User_model{
-        private $db;
 
         public function __contruct(){
             $this->db= new Database;

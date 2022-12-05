@@ -70,13 +70,13 @@
         </a>
 
         <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet">
+        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_outlet_page">
           <i class="bi bi-building"></i>
           <span>Tambah Outlet</span>
         </a>
 
         <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry">
+        <a class="nav-link collapsed" href="<?= BASEURL; ?>/DashboardPemilik/tambah_harga_laundry_page">
           <i class="bi bi-cash-stack"></i>
           <span>Tambah Harga Laundry</span>
         </a>
