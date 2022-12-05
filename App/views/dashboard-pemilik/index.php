@@ -320,6 +320,81 @@
               </div>
             </div><!-- End Recent Sales -->
 
+            <!-- Recent Sales -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+
+                <div class="card-body">
+                  <h5 class="card-title">Pegawai </h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Outlets ID</th>
+                        <th scope="col">Akun ID</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php foreach( $data as $transaksi) : ?>
+                      <tr>
+                        <th scope="row"><a href="#"><?= $transaksi['ID']; ?></a></th>
+                        <td><?= $transaksi['NAMA']; ?></td>
+                        <td><a href="#" class="text-primary"><?= $transaksi['JUMLAH_LAUNDRY']; ?></a></td>
+                        <td><?= $transaksi['TGL_DIMULAI']; ?></td>
+                        <td><?= $transaksi['TGL_BERAKHIR']; ?></td>
+                        <td><span class="badge rounded-pill bg-primary"><?= $transaksi['STATUS']; ?></span></td>
+                      </tr>
+                    <?php endforeach;?>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Recent Sales -->
+
+
+            
+            <!-- Recent Sales -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+
+                <div class="card-body">
+                  <h5 class="card-title">Outlet </h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">No Telepon</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php foreach( $data as $transaksi) : ?>
+                      <tr>
+                        <th scope="row"><a href="#"><?= $transaksi['ID']; ?></a></th>
+                        <td><?= $transaksi['NAMA']; ?></td>
+                        <td><a href="#" class="text-primary"><?= $transaksi['JUMLAH_LAUNDRY']; ?></a></td>
+                        <td><?= $transaksi['TGL_DIMULAI']; ?></td>
+                        <td><?= $transaksi['TGL_BERAKHIR']; ?></td>
+                        <td><span class="badge rounded-pill bg-primary"><?= $transaksi['STATUS']; ?></span></td>
+                      </tr>
+                    <?php endforeach;?>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Recent Sales -->
+
             <!-- Top Selling -->
             <div class="col-12">
               <div class="card top-selling overflow-auto">
