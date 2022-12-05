@@ -41,7 +41,11 @@ class DashboardPegawai extends Controller{
     }
 
     public function transaction_insert(){
-        var_dump($_POST);
+        $transactionStatus = $this->model('Transaksi_model')->insertTransaksi($_POST);
+        if( $transactionStatus > 0){
+            header('Location: '. BASEURL .'/dashboardpegawai/input_transaction');
+            exit;
+        }
     }
 }
 ?>

@@ -161,11 +161,11 @@
                 </div>
                 <div class="form-group col-md-3">
                   <label for="inputStatus">Status</label>
-                  <select class="form-control" id="inputStatus" placeholder="Baju">
+                  <select class="form-control" id="inputStatus" name="inputStatus" placeholder="Baju">
                     <option value="Pilih-status" disabled selected>Pilih status..</option>
-                    <option value="dikerjakan" >Dikerjakan</option>
-                    <option value="menunggu">Menunggu</option>
-                    <option value="selesai">Selesai</option>
+                    <option value="Dikerjakan" >Dikerjakan</option>
+                    <option value="Menunggu">Menunggu</option>
+                    <option value="Selesai">Selesai</option>
                   </select>
                 </div>
                 <div class="col-md-12">
