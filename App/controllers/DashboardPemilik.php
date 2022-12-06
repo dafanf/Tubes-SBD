@@ -4,9 +4,10 @@ class DashboardPemilik extends Controller{
         $header['judul'] = 'Dashboard Pemilik';
         $data_transaksi = $this->model('Transaksi_model')->getAllTransaksi();
         $data_harga_laundry = $this->model('Transaksi_model')->getAllHargaJenisLaundry();
-        $data = array_merge($data_transaksi, $data_harga_laundry);
+        $data_akun = $this->model('Akun_model')->getAllAkun();
+        $data_outlet = $this->model('Akun_model')->getAllOutlets();
         $this->view('templates/header', $header);
-        $this->view('dashboard-pemilik/index', $data_transaksi, $data_harga_laundry);
+        $this->view('dashboard-pemilik/index', $data_transaksi, $data_harga_laundry, $data_akun, $data_outlet);
         $this->view('templates/footer');
     }
 
@@ -63,11 +64,16 @@ class DashboardPemilik extends Controller{
             exit;
         }
     }
-    
+
     public function tambah_outlets(){
         $testOutlets = $this->model('Outlets_model')->tambahOutlets($_POST);
 
-        if($testOutlets > 0){
+        if( $testOutlets > 0){
+            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            header('Location: '. BASEURL .'/dashboardpemilik/tambah_outlet_page');
+            exit;
+        }else{
+            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
             header('Location: '. BASEURL .'/dashboardpemilik/tambah_outlet_page');
             exit;
         }
@@ -76,10 +82,20 @@ class DashboardPemilik extends Controller{
     public function tambah_harga(){
         $testHarga = $this->model('Harga_model')->tambahHargaLaundry($_POST);
 
-        if($testHarga > 0){
+        if( $testharga > 0){
+            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            header('Location: '. BASEURL .'/dashboardpemilik/tambah_harga_laundry_page');
+            exit;
+        }else{
+            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
             header('Location: '. BASEURL .'/dashboardpemilik/tambah_harga_laundry_page');
             exit;
         }
+    }
+
+    public function delete($Id){
+        $deleteStatus = $this->model('Akun_model')->deletePengguna($Id);
+        var_dump($deleteStatus);
     }
 
 
