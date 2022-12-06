@@ -93,5 +93,27 @@
             $this->db->execute();
             return $this->db->rowCount();
         }
+
+        public function showAkun(){
+            $val = 0;
+            $query = "BEGIN 
+                      :var := TOTALPENGGUNA(); 
+                      END;";
+            $this->db->query($query);
+            $this->db->bindOutput('var', $val);
+            $this->db->execute();
+            return $val;
+        }
+
+        public function showOutlet(){
+            $val = 0;
+            $query = "BEGIN 
+                      :var := TOTALOUTLET(); 
+                      END;";
+            $this->db->query($query);
+            $this->db->bindOutput('var', $val);
+            $this->db->execute();
+            return $val;
+        }
     }
 ?>

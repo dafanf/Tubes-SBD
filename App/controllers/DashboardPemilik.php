@@ -6,8 +6,10 @@ class DashboardPemilik extends Controller{
         $data_harga_laundry = $this->model('Transaksi_model')->getAllHargaJenisLaundry();
         $data_akun = $this->model('Akun_model')->getAllAkun();
         $data_outlet = $this->model('Akun_model')->getAllOutlets();
+        $showAkun = $this->model('Akun_model')->showAkun();
+        $showOutlet = $this->model('Akun_model')->showOutlet();
         $this->view('templates/header', $header);
-        $this->view('dashboard-pemilik/index', $data_transaksi, $data_harga_laundry, $data_akun, $data_outlet);
+        $this->view('dashboard-pemilik/index', $data_transaksi, $data_harga_laundry, $data_akun, $data_outlet, $showAkun, $showOutlet);
         $this->view('templates/footer');
     }
 
@@ -97,6 +99,7 @@ class DashboardPemilik extends Controller{
         $deleteStatus = $this->model('Akun_model')->deletePengguna($Id);
         var_dump($deleteStatus);
     }
+
 
 
     public function transaksi(){
