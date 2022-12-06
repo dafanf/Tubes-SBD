@@ -337,20 +337,18 @@
                         <th scope="col">ID</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Outlets ID</th>
                         <th scope="col">Akun ID</th>
                         <th scope="col">Status</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach( $data['akun'] as $akun) : ?>
+                      <?php foreach( $data3 as $akun) : ?>
                       <tr>
                         <th scope="row"><a href="#"><?= $akun['ID']; ?></a></th>
                         <td><?= $akun['NAMA']; ?></td>
                         <td><a href="#" class="text-primary"><?= $akun['EMAIL']; ?></a></td>
-                        <td><?= $akun['ID']; ?></td>
-                        <td><?= $akun['IDAKUN']; ?></td>
-                        <td><span class="badge rounded-pill bg-primary"><?= $akun['STATUS']; ?></span></td>
+                        <td><?= $akun['AKUN_ID']; ?></td>
+                        <td><a href="<?= BASEURL; ?>/dashboardPemilik/delete/<?= $akun['ID']?>" class="badge rounded-pill bg-secondary">Delete</a></td>
                       </tr>
                     <?php endforeach;?>
                     </tbody>
@@ -379,19 +377,20 @@
                         <th scope="col">No Telepon</th>
                         <th scope="col">Tanggal Disubmit</th>
                         <th scope="col">Tanggal Diupdate</th>
-                        <th scope="col">Status</th>
+                        <th scope="col" colspan="2">Status</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach( $data as $outlet) : ?>
+                      <?php foreach( $data4 as $outlet) : ?>
                       <tr>
                         <th scope="row"><a href="#"><?= $outlet['ID']; ?></a></th>
                         <td><?= $outlet['NAMA']; ?></td>
                         <td><a href="#" class="text-primary"><?= $outlet['ALAMAT']; ?></a></td>
-                        <td><?= $outlet['NO_TELP']; ?></td>
+                        <td><?= $outlet['NO_TLP']; ?></td>
                         <td><?= $outlet['TGL_DIBUAT']; ?></td>
                         <td><?= $outlet['TGL_DIUPDATE']; ?></td>
                         <td><span class="badge rounded-pill bg-primary"><?= $outlet['STATUS']; ?></span></td>
+                        <td><a href="#" class="badge rounded-pill bg-secondary">Delete</a></td>
                       </tr>
                     <?php endforeach;?>
                     </tbody>
@@ -436,6 +435,7 @@
                         <td><a href="#" class="text-primary fw-bold"><?= $harga['NAMA']; ?></a></td>
                         <td><?= $harga['HARGA'];?></td>
                         <td class="fw-bold"><?= $harga['TGL_UPDATE']?></td>
+                        <td><a href="#" class="badge rounded-pill bg-secondary">Delete</a></td>
                       </tr>
                       <?php endforeach; ?>
                     </tbody>

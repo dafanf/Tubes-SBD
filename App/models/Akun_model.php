@@ -85,5 +85,13 @@
             $this->db->execute();
             return $this->db->resultSet();
         }
+
+        public function deletePengguna($Id){
+            $query = "DELETE FROM PENGGUNA WHERE ID = :id";
+            $this->db->query($query);
+            $this->db->bind('id', $Id);
+            $this->db->execute();
+            return $this->db->rowCount();
+        }
     }
 ?>
