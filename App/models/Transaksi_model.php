@@ -38,5 +38,14 @@
 
             return $this->db->rowCount();
         }
+
+        public function deleteTransaksi($data){
+            $query = "DELETE FROM TRANSAKSI WHERE ID=:idTrans";
+            $this->db->query($query);
+            $this->db->bind('idTrans',$data);
+            $this->db->execute();
+
+            return $this->db->rowCount();
+        }
     }
 ?>

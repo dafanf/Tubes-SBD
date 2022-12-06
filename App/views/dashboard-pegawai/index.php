@@ -22,7 +22,7 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="<?= BASEURL; ?>/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">Dafa Nurul Fauziansyah</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -160,9 +160,9 @@
                           <td><?= $transaksi['TGL_DIMULAI'] ;?></td>
                           <td><?= $transaksi['TGL_BERAKHIR'] ;?></td>
                           <td><span class="badge rounded-pill <?= $status_badge;?>"><?= $transaksi['STATUS'] ;?></span></td>
-                          <td><a href="<?= BASEURL; ?>/dashboardpegawai/input_transaction" class="badge rounded-pill bg-primary">Submit</a></td>
+                          <td><a href="<?= BASEURL; ?>/dashboardpegawai/tampil_struk" class="badge rounded-pill bg-primary">Submit</a></td>
                           <td><a href="#" class="badge rounded-pill bg-info">Edit</a></td>
-                          <td><a href="#" class="badge rounded-pill bg-secondary">Delete</a></td>
+                          <td><a href="<?= BASEURL; ?>/dashboardpegawai/delete_transaction/<?= $transaksi['ID']?>" class="badge rounded-pill bg-secondary" onclick="return confirm('Apa anda Yakin Ingin Menghapus Data Ini ?');">Delete</a></td>
                         </tr>
                       <?php endforeach;?>
                     </tbody>

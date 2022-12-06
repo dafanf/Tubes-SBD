@@ -47,5 +47,20 @@ class DashboardPegawai extends Controller{
             exit;
         }
     }
+
+    public function delete_transaction($id){
+        $transactionStatus = $this->model('Transaksi_model')->deleteTransaksi($id);
+        if( $transactionStatus > 0){
+            header('Location: '. BASEURL .'/dashboardpegawai');
+            exit;
+        }
+    }
+
+    public function tampil_struk(){
+        $header['judul'] = 'Struk Transaksi';
+        $this->view('templates/header', $header);
+        $this->view('dashboard-pegawai/transaction_page');
+        $this->view('templates/footer');
+    }
 }
 ?>
